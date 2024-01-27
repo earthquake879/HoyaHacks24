@@ -5,6 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+
 .sidebar {
     height: 100%;
     width: 200px;
@@ -15,7 +16,16 @@ body, html {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
+    border: 2px solid rgb(56, 19, 59);
 }
+.main-content h1 {
+    /* text-align: center; */
+    font-family: 'Brush Script MT', sans-serif;
+    /* height: 100%;
+    width: 200px; */
+    font-size: 2em; /* Adjust the size as needed */
+    /* margin-bottom: 20px;  */
+  }
 
 .sidebar a {
     padding: 6px 8px 6px 16px;
@@ -30,7 +40,9 @@ body, html {
 }
 
 .main-content {
-    margin-left: 200px;
+    text-align: center;
+    /* margin-left: 200px; */
+
     padding: 0px 10px;
 }
 
