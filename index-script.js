@@ -16,17 +16,7 @@ function success(pos) {
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
-// If user has not visited site before, ask for location permissions
-if (!localStorage.getItem('locationPerms') === null) {
-  console.log("First time?")
 
-  // Get permission
-  navigator.geolocation.getCurrentPosition((position) => {
-    // Set to true if it works
-    localStorage.setItem('locationPerms', true);
-  }, (error) => {
-    // It didn't work, set to false
-    localStorage.setItem('locationPerms', false);
-    console.log("Location permission denied, cannot continue.")
-  })
-}
+document.getElementById("getLocation").addEventListener("click", function() {
+  navigator.geolocation.getCurrentPosition(success, error, options);
+});
