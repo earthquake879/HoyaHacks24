@@ -10,6 +10,17 @@ function initMap() {
         title: 'My location'
     });
 }
+
+function showMaps() {
+    document.getElementById('mapsDashboard').style.display = 'block';
+    document.getElementById('lightDetectionDashboard').style.display = 'none';
+}
+
+function showLightDetection() {
+    document.getElementById('mapsDashboard').style.display = 'none';
+    document.getElementById('lightDetectionDashboard').style.display = 'block';
+    openLightDetection(); // Call this function to start light detection
+}
 function openLightDetection() {
     const video = document.getElementById('videoElement');
 
@@ -108,13 +119,3 @@ function processFrame() {
 openLightDetection();
 
 
-function showMaps() {
-    document.getElementById('mapsDashboard').style.display = 'block';
-    document.getElementById('lightDetectionDashboard').style.display = 'none';
-}
-
-function showLightDetection() {
-    document.getElementById('mapsDashboard').style.display = 'none';
-    document.getElementById('lightDetectionDashboard').style.display = 'block';
-    openLightDetection(); // Call this function to start light detection
-}

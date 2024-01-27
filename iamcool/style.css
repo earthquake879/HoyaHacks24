@@ -54,4 +54,8 @@ body, html {
     display: none; /* By default, dashboard contents are not displayed */
 }
 
+#map {
+    height: 500px; /* Ensure map has a set height */
+}
+
 /* Other styling as needed */
