@@ -38,3 +38,8 @@ body, html {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+.dashboard-content {
+    display: none; /* By default, dashboard contents are not displayed */
+}
+
+/* Other styling as needed */
