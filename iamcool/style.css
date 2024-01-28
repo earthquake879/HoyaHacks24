@@ -5,6 +5,12 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+header h1 {
+    text-align: center;
+    margin-top: 50px; /* Adjust the top margin as needed */
+    margin-bottom: 20px; /* Adjust the bottom margin as needed */
+    margin-left: 60px;
+}
 
 #environeerL {
     position: absolute;
