@@ -2,13 +2,13 @@ async function sendTask(username, score, task) {
     username = encodeURI(username);
     score = encodeURI(score);
     task = encodeURI(task);
-    const url = "environeer.glitch.me/task?user="+username+"&score="+score+"&task="+task;
+    const url = "https://environeer.glitch.me/task?user="+username+"&score="+score+"&task="+task;
     return await((await fetch(url)).json());
 }
 async function sendQuiz(username, score) {
     username = encodeURI(username);
     score = encodeURI(score);
-    const url = "environeer.glitch.me/quiz?user="+username+"&score="+score;
+    const url = "https://environeer.glitch.me/quiz?user="+username+"&score="+score;
     return await((await fetch(url)).json());
 }
 var selectedMarker = null;
@@ -124,7 +124,7 @@ function showLightDetection() {
 }
 function openLightDetection() {
     const video = document.getElementById('videoElement');
-
+    /*
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(function (stream) {
@@ -135,6 +135,7 @@ function openLightDetection() {
                 console.log("Something went wrong with the video stream!");
             });
     }
+    */
 }
 
 function processFrame() {
