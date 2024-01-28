@@ -106,7 +106,7 @@ function showLightDetection() {
 }
 function openLightDetection() {
     const video = document.getElementById('videoElement');
-
+    /*
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(function (stream) {
@@ -117,6 +117,7 @@ function openLightDetection() {
                 console.log("Something went wrong with the video stream!");
             });
     }
+    */
 }
 
 function processFrame() {
