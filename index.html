@@ -147,6 +147,8 @@
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="#" onclick="showMaps()">Maps</a>
+        <button onclick="showEconaires()">Econaires Quiz</button>
+
     </div>
 
     <div class="main-content">
@@ -163,6 +165,95 @@
       <!-- Add additional map-related content here if needed -->
   </div>
   <div id="homeDashboard" class="dashboard-content">
+    <!-- Home dashboard content -->
+</div>
+
+<!-- Econaires Quiz Dashboard Content, initially hidden -->
+<!-- Econaires Quiz Dashboard Content -->
+<div id="econairesDashboard" class="dashboard-content" style="display: none;">
+  <h2>Econaires Energy Quiz</h2>
+  <form id="quizForm">
+      <!-- Repeat the following structure for each question -->
+      <!-- Question 1 -->
+      <!-- Question 2 -->
+<!-- Question 1 -->
+<div class="question">
+  <p>What percentage of the energy used by traditional incandescent light bulbs is emitted as heat rather than light?</p>
+  <label><input type="radio" name="q1" value="a"> 5%</label>
+  <label><input type="radio" name="q1" value="b"> 15%</label>
+  <label><input type="radio" name="q1" value="c"> 25%</label>
+  <label><input type="radio" name="q1" value="d"> 95%</label>
+
+  <p>What percentage of the world's energy comes from renewable sources?</p>
+  <label><input type="radio" name="q1" value="a"> 5%</label>
+  <label><input type="radio" name="q1" value="b"> 15%</label>
+  <label><input type="radio" name="q1" value="c"> 25%</label>
+  <label><input type="radio" name="q1" value="d"> 45%</label>
+
+  <p>Which appliance consumes the most energy when in standby mode?</p>
+  <label><input type="radio" name="q1" value="a"> Television</label>
+  <label><input type="radio" name="q1" value="b"> Microwave</label>
+  <label><input type="radio" name="q1" value="c"> Computer</label>
+  <label><input type="radio" name="q1" value="d"> Coffee maker</label>
+
+  <p>Which sector consumes the largest share of energy in most developed countries?</p>
+  <label><input type="radio" name="q1" value="a"> Industrial</label>
+  <label><input type="radio" name="q1" value="b"> Residential</label>
+  <label><input type="radio" name="q1" value="c"> Commercial</label>
+  <label><input type="radio" name="q1" value="d"> Coffee maker</label>
+
+  <p>What is the primary challenge associated with the widespread adoption of renewable energy?</p>
+  <label><input type="radio" name="q1" value="a"> High initial investment costs</label>
+  <label><input type="radio" name="q1" value="b"> Limited availability of resources</label>
+  <label><input type="radio" name="q1" value="c"> Inefficient technology</label>
+  <label><input type="radio" name="q1" value="d"> Environmental concerns</label>
+
+  <p>What is the fastest-growing source of energy globally?</p>
+  <label><input type="radio" name="q1" value="a"> Coal</label>
+  <label><input type="radio" name="q1" value="b"> Nuclear power</label>
+  <label><input type="radio" name="q1" value="c"> Solar energy</label>
+  <label><input type="radio" name="q1" value="d"> Hydroelectric power</label>
+
+  <p>Which fossil fuel is the most widely used for energy production worldwide?</p>
+  <label><input type="radio" name="q1" value="a"> Coal</label>
+  <label><input type="radio" name="q1" value="b"> Natural gas</label>
+  <label><input type="radio" name="q1" value="c"> Petroleum</label>
+  <label><input type="radio" name="q1" value="d"> Propane</label>
+
+  <p>Which fossil fuel is the most widely used for energy production worldwide?</p>
+  <label><input type="radio" name="q1" value="a"> 10 years</label>
+  <label><input type="radio" name="q1" value="b"> 20 years</label>
+  <label><input type="radio" name="q1" value="c"> 30 years</label>
+  <label><input type="radio" name="q1" value="d"> 40 years</label>
+
+  <p>Which continent has the highest potential for tidal energy generation?</p>
+  <label><input type="radio" name="q1" value="a"> North America</label>
+  <label><input type="radio" name="q1" value="b"> Europe</label>
+  <label><input type="radio" name="q1" value="c"> Asia</label>
+  <label><input type="radio" name="q1" value="d"> Australia</label>
+
+  <p>What was the first renewable energy source used by humans?</p>
+  <label><input type="radio" name="q1" value="a"> Wind</label>
+  <label><input type="radio" name="q1" value="b"> Solar</label>
+  <label><input type="radio" name="q1" value="c"> Water</label>
+  <label><input type="radio" name="q1" value="d"> Biomass</label>
+</div>
+
+
+<!-- Repeat for each question -->
+
+      <!-- ... Additional questions ... -->
+      <button type="button" onclick="submitQuiz()">Submit Answers</button>
+  </form>
+  <div id="quizResult" style="display: none;">
+      <h3>Your Score: <span id="userScore">0</span>/10</h3>
+      <!-- Correct answers can be shown here -->
+  </div>
+</div>
+
+
+
+
 
     <div id="lightDetectionDashboard" class="dashboard-content" style="display: none;">
         <!-- Light Detection Dashboard Content -->

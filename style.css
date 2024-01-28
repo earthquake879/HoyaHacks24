@@ -118,5 +118,106 @@ header h1 {
 
 /* Other styling as needed */
 
+/* Add this inside your existing style.css file */
+#econairesDashboard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#econairesDashboard h2 {
+    text-align: center;
+    color: #333;
+}
+
+#quizForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#quizForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009B77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#quizForm button:hover {
+    background-color: #007D5E;
+}
+
+#quizResult {
+    margin-top: 15px;
+    text-align: center;
+}
+.sidebar a, .sidebar button {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.sidebar a:hover, .sidebar button:hover {
+    color: #f1f1f1;
+}
 
 
+#econairesDashboard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#econairesDashboard h2 {
+    text-align: center;
+    color: #333;
+}
+
+
+
+.question p {
+    font-weight: bold;
+}
+
+
+
+#quizForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009B77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#quizForm button:hover {
+    background-color: #007D5E;
+}
+
+#quizResult {
+    margin-top: 15px;
+    text-align: center;
+}
+.question label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    margin-right: 5px;
+}
