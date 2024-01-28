@@ -220,13 +220,13 @@ header h1 {
     margin-right: 5px;
 }
 #calculatorDashboard {
-    margin-left: 10%;
+    margin-left: 34%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin: 20px auto; 
-    max-width: 600px; 
+    margin: 20px auto; /* Adds margin on top/bottom and auto on left/right to center horizontally */
+    max-width: 600px; /* Adjust as needed for your design */
     border: 1px solid #009B77;
     background-color: #fff;
 }
