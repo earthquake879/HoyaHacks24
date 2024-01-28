@@ -7,21 +7,21 @@ body, html {
 
 header h1 {
     text-align: center;
-    margin-top: 1%; /* Adjust the top margin as needed */
-    margin-bottom: 1%; /* Adjust the bottom margin as needed */
+    margin-top: 1%; 
+    margin-bottom: 1%; 
     margin-left: 4%;
     animation-name: bouncing;
-    animation-duration: 1s; /* Set the duration of the animation */
+    animation-duration: 1s; 
     animation-iteration-count: 1;
-    position: relative; /* Set the position property */
+    position: relative; 
 }
 
 #environeerL {
     position: absolute;
-    bottom: 84.5%; /* Adjust the top position as needed */
-    right: 12%; /* Adjust the left position as needed */
-    width: 8%; /* Set the desired width */
-    height: auto; /* Maintain aspect ratio for height */
+    bottom: 84.5%; 
+    right: 12%; 
+    width: 8%; 
+    height: auto; 
   }
 
 
@@ -38,12 +38,8 @@ header h1 {
     border: 2px solid rgb(56, 19, 59);
 }
 .main-content h1 {
-    /* text-align: center; */
-    /* font-family: 'Brush Script MT', sans-serif; */
-    /* height: 100%;
-    width: 200px; */
-    font-size: 2em; /* Adjust the size as needed */
-    /* margin-bottom: 20px;  */
+   
+    font-size: 2em; 
   }
 
 .question{
@@ -88,8 +84,8 @@ header h1 {
 
 .main-content {
     text-align: center;
-    margin-left: auto; /* Auto margin to push the element to the right */
-    margin-right: 20px; /* Adjust the right margin as needed */
+    margin-left: auto; 
+    margin-right: 20px; 
     max-width: 25%;
     padding: 10px;
     border: 1px solid #009B77;
@@ -98,8 +94,7 @@ header h1 {
 
 
 .main-content p{
-    /* width: 200px;
-    max-width: 50%; */
+  
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -112,16 +107,14 @@ header h1 {
   .sidebar a {font-size: 18px;}
 }
 .dashboard-content {
-    display: none; /* By default, dashboard contents are not displayed */
+    display: none; 
 }
 
 #map {
-    height: 50%; /* Ensure map has a set height */
+    height: 50%; 
 }
 
-/* Other styling as needed */
 
-/* Add this inside your existing style.css file */
 #econairesDashboard {
     background-color: #f9f9f9;
     padding: 20px;
@@ -230,29 +223,29 @@ header h1 {
     margin-left: 10%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Aligns children (form) in the center of this div */
+    align-items: center;
     padding: 20px;
-    margin: 20px auto; /* Adds margin on top/bottom and auto on left/right to center horizontally */
-    max-width: 600px; /* Adjust as needed for your design */
+    margin: 20px auto; 
+    max-width: 600px; 
     border: 1px solid #009B77;
     background-color: #fff;
 }
 
 #calculatorDashboard .appliance {
     display: flex;
-    justify-content: center; /* Centers the checkbox and input within each .appliance div */
-    margin-bottom: 10px; /* Adds some space between each appliance row */
+    justify-content: center;
+    margin-bottom: 10px; 
 }
 
 #calculatorDashboard .appliance input[type="text"] {
-    margin-left: 10px; /* Adds some space between the checkbox label and the input field */
+    margin-left: 10px; 
 }
 
 #leaderboardDashboard {
     margin-left: 10%;
     margin: 20px auto;
     padding: 20px;
-    max-width: 100%; /* Adjust as needed */
+    max-width: 100%; 
     background-color:   #228b22;
 }
 

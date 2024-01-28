@@ -11,7 +11,7 @@
             
     background-size: cover; 
     background-position: center; 
-           color: #333; /* Dark gray text color */
+           color: #333; 
         }
         
         .container {
@@ -29,9 +29,9 @@
 }
 
         header {
-            margin-left: 8%; /* Auto margin to push it to the right */
-            background-color: #009B77; /* Georgetown green header background */
-            color: #fff; /* White text color */
+            margin-left: 8%; 
+            background-color: #009B77; 
+            color: #fff;
             padding: 1.4%;
             text-align: center;
         }
@@ -40,24 +40,24 @@
             display: flex;
             justify-content: space-between;
             margin: 1.7%;
-            margin-left: 15%; /* Auto margin to push it to the right */
+            margin-left: 15%; 
         }
 
         .sidebar {
             flex: 0 0 15%;
-            background-color: #005A46; /* Dark green sidebar background */
-            color: #fff; /* White text color */
+            background-color: #005A46; 
+            color: #fff; 
             padding: 1.7%;
-            width: 10%; /* Adjusted width */
+            width: 10%;
             text-align: center;
         }
 
         .main-content {
-            width: calc(65%); /* Adjusted width, considering padding */
+            width: calc(65%); 
     padding: 1.7%;
-    margin-left: 41%; /* Auto margin to push it to the right */
-    margin-right: auto; /* Auto margin to push it to the left */
-    text-align: center; /* Center the text within the main content */
+    margin-left: 41%; 
+    margin-right: auto; 
+    text-align: center; 
 }
         
         .main-content p{
@@ -71,33 +71,33 @@
 
         .reminder-section,
         .map-section {
-            background-color: #fff; /* White background for sections */
+            background-color: #fff; 
             padding: 1.7%;
             margin-bottom: 1.7%;
         }
 
         .reminder-section button {
-            background-color: #009B77; /* Georgetown green button */
-            color: #fff; /* White text color */
+            background-color: #009B77; 
+            color: #fff;
             padding: 0.8% 1.7%;
             border: none;
             cursor: pointer;
         }
 
         .reminder-section button:hover {
-            background-color: #007D5E; /* Darker green on hover */
+            background-color: #007D5E; 
         }
 
         .map-section button {
-            background-color: #009B77; /* Georgetown green button */
-            color: #fff; /* White text color */
+            background-color: #009B77; 
+            color: #fff;
             padding: 0.8% 1.7%;
             border: none;
             cursor: pointer;
         }
 
         .map-section button:hover {
-            background-color: #007D5E; /* Darker green on hover */
+            background-color: #007D5E; 
         }
         img {
             max-width: 100%;
@@ -105,8 +105,8 @@
         }
 
         footer {
-            background-color: #333; /* Dark gray footer background */
-            color: #fff; /* White text color */
+            background-color: #333;
+            color: #fff; 
             padding: 1.7%;
             text-align: center;
             position: fixed;
@@ -120,12 +120,7 @@
         <h1>Welcome to the Environeer</h1>
         <img id = "environeerL" src="EnvironeerLogo1.png" alt="My Image">
         <nav>
-            <!-- <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Reminders</a></li>
-                <li><a href="#">Map</a></li>
-            </ul> -->
+           
            
         </nav>
     </header>
@@ -146,7 +141,6 @@
 
     <script>
         function openMap() {
-            // Open a new window with the PNG file
             window.open('heatmapGeorgetown.png', '_blank', 'width=600, height=400');
         }
     </script>
@@ -175,21 +169,14 @@
       <div id="map" style="height: 500px;"></div>
       <button id="removeMarkerBtn" onclick="removeSelectedMarker()">Remove Selected Marker</button>
 
-      <!-- Add additional map-related content here if needed -->
+      
   </div>
   <div id="homeDashboard" class="dashboard-content">
-    <!-- Home dashboard content -->
 </div>
 
-<!-- Econaires Quiz Dashboard Content, initially hidden -->
-<!-- Econaires Quiz Dashboard Content -->
 <div id="econairesDashboard" class="dashboard-content" style="display: none;">
   <h2>Econaires Energy Quiz</h2>
   <form id="quizForm">
-      <!-- Repeat the following structure for each question -->
-      <!-- Question 1 -->
-      <!-- Question 2 -->
-<!-- Question 1 -->
 <div class="question">
     <p>What percentage of the energy used by traditional incandescent light bulbs is emitted as heat rather than light?</p>
     <label><input type="radio" name="q1" value="a"> 5%</label>
@@ -252,41 +239,31 @@
     <label><input type="radio" name="q10" value="d"> Biomass</label>
   </div>
 
-<!-- Repeat for each question -->
 
-      <!-- ... Additional questions ... -->
       <button type="button" onclick="submitQuiz()">Submit Answers</button>
     </form>
   <div id="quizResult" style="display: none;">
       <h3>Your Score: <span id="userScore">0</span>/10</h3>
-      <!-- Correct answers can be shown here -->
   </div>
 </div>
 
 
-<!-- Calculator Dashboard Content -->
 <div id="calculatorDashboard" class="dashboard-content" style="display: none;">
     <h2>Energy Use Calculator</h2>
     <form id="calculatorForm">
-        <!-- Dynamically generate this part based on the appliance data -->
-        <!-- Example for one appliance: -->
         <div class="appliance">
             <label for="applienceCheckbox">Appliance</label>
             <input type="text" id="applienceHours" placeholder="Hours Used" style="display: none;">
         </div>
-        <!-- Repeat for each appliance -->
         <button type="button" onclick="submitCalculator()">Submit</button>
     </form>
     <div id="calculatorResult" style="display: none;">
-        <!-- Results table will be generated here -->
     </div>
     <form id="calculatorForm" onsubmit="submitCalculator(); return false;">
-        <!-- Dynamically generated checkboxes and input fields for each appliance -->
         <button type="submit">Calculate</button>
     </form>
     
 </div>
-<!-- Leaderboard Dashboard Content -->
 <div id="leaderboardDashboard" class="dashboard-content" style="display: none;">
     <h2>Leaderboard</h2>
     <table id="leaderboardTable">
@@ -298,7 +275,6 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Leaderboard rows will be populated here -->
         </tbody>
     </table>
 </div>
@@ -306,7 +282,6 @@
 
 
     <div id="lightDetectionDashboard" class="dashboard-content" style="display: none;">
-        <!-- Light Detection Dashboard Content -->
         <video id="videoElement" width="640" height="480" autoplay></video>
     </div>
     
