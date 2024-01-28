@@ -47,7 +47,7 @@ header h1 {
   }
 
 .question{
-    margin-left: 20%;
+    margin-left: 15%;
 }
  
   @keyframes bouncing {  
@@ -184,6 +184,7 @@ header h1 {
 }
 
 #econairesDashboard h2 {
+    margin-left: 10%;
     text-align: center;
     color: #333;
 }
@@ -197,7 +198,8 @@ header h1 {
 
 
 #quizForm button {
-    width: 100%;
+    margin-left: 16%;
+    width: 80%;
     padding: 10px;
     background-color: #009B77;
     color: white;
