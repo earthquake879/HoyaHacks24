@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+var markers = []; // This will hold all markers
+var selectedMarker; // This will reference the currently selected marker
+=======
+async function sendScore(username, score, task) {
+    username = encodeURI(username);
+    score = encodeURI(score);
+    task = encodeURI(task);
+    const url = "environeer.glitch.me/score?user="+username+"&score="+score+"&task="+task;
+    return await((await fetch(url)).json());
+}
+
+
+
+
+>>>>>>> 3a1b97f1f0acc272327b790b4322d05d1f46c721
+
 var selectedMarker = null;
 
 function initMap() {
@@ -79,10 +96,14 @@ function getColorForMarker(color) {
 
 
 function showMaps() {
-    document.getElementById('homeDashboard').style.display = 'none'; // Hide home dashboard
-    document.getElementById('mapContent').style.display = 'block'; // Show map content
-    initMap(); // Initialize the map if needed
+    // Hide other dashboard contents
+    document.getElementById('homeDashboard').style.display = 'none';
+    document.getElementById('lightDetectionDashboard').style.display = 'none';
+
+    // Show the map dashboard content
+    document.getElementById('mapContent').style.display = 'block';
 }
+
 function showEconaires() {
     // Hide any sections that shouldn't be displayed with the home page
     document.getElementById('mapContent').style.display = 'none';
@@ -203,39 +224,56 @@ openLightDetection();
 
 
 function submitQuiz() {
+    // Prompt for the username
+    var username = prompt("Please enter your username to submit your answers:");
+    
+    // Check if the username is entered
+    if (username === null || username.trim() === "") {
+        alert("Username is required to submit the quiz.");
+        return; // Exit the function if no username is entered
+    }
+    
+    // Initialize score
     var score = 0;
-    var totalQuestions = 10;
-    var form = document.getElementById('quizForm');
-    var userScore = document.getElementById('userScore');
-    var resultSection = document.getElementById('quizResult');
-
-    // Example logic for checking an answer
-    var q1 = form['q1'].value;
-    if(q1 === 'd') { score++; }
-    // Repeat for all questions...
-
-    // Display the score
-    userScore.textContent = score.toString();
-    resultSection.style.display = 'block';
-}
-function submitQuiz() {
-    var score = 0;
+    
+    // Correct answers for the quiz
     var correctAnswers = {
-        q1: 'd', q2: 'c', q3: 'c', q4: 'd',
+        q1: 'd', qg2: 'c', q3: 'c', q4: 'd',
         q5: 'a', q6: 'c', q7: 'c', q8: 'b',
         q9: 'b', q10: 'd'
     };
     
+    // Iterate over each question and check answers
     for (var i = 1; i <= 10; i++) {
         var question = 'q' + i;
         var selectedValue = document.querySelector('input[name="' + question + '"]:checked');
         
+        // If the selected answer matches the correct answer, increment the score
         if (selectedValue && selectedValue.value === correctAnswers[question]) {
             score++;
         }
     }
     
-    // Display the score
+    // Show the score
     document.getElementById('userScore').textContent = score;
     document.getElementById('quizResult').style.display = 'block';
+    
+    // Optionally, you can also display the username
+    // You might want to add a place in your HTML to show the username
+    // For example: <div id="usernameDisplay"></div>
+    // document.getElementById('usernameDisplay').textContent = "Username: " + username;
+    
+    // Now, you could also do something with the username and score,
+    // like sending them to a server or using them in further logic
+}
+
+
+function removeSelectedMarker() {
+    if (selectedMarker) {
+        selectedMarker.setMap(null); // Removes the marker from the map
+        markers = markers.filter(marker => marker !== selectedMarker);
+        selectedMarker = null;
+    } else {
+        alert("No marker selected!");
+    }
 }

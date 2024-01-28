@@ -162,6 +162,8 @@
 
     <div id="mapContent" class="dashboard-content" style="display: none;">
       <div id="map" style="height: 500px;"></div>
+      <button id="removeMarkerBtn" onclick="removeSelectedMarker()">Remove Selected Marker</button>
+
       <!-- Add additional map-related content here if needed -->
   </div>
   <div id="homeDashboard" class="dashboard-content">
@@ -243,7 +245,7 @@
 
       <!-- ... Additional questions ... -->
       <button type="button" onclick="submitQuiz()">Submit Answers</button>
-  </form>
+    </form>
   <div id="quizResult" style="display: none;">
       <h3>Your Score: <span id="userScore">0</span>/10</h3>
       <!-- Correct answers can be shown here -->
