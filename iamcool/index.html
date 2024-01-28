@@ -10,8 +10,22 @@
             background-color: #f5f5f5; /* Light gray background */
             color: #333; /* Dark gray text color */
         }
+        
+        .container {
+  display: flex;
+}
+
+        .content {
+            
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-self: flex-start;
+}
 
         header {
+            margin-left: 120px; /* Auto margin to push it to the right */
             background-color: #009B77; /* Georgetown green header background */
             color: #fff; /* White text color */
             padding: 20px;
@@ -22,23 +36,28 @@
             display: flex;
             justify-content: space-between;
             margin: 20px;
+            margin-left: 220px; /* Auto margin to push it to the right */
         }
 
         .sidebar {
+            flex: 0 0 200px;
             background-color: #005A46; /* Dark green sidebar background */
             color: #fff; /* White text color */
             padding: 20px;
-            width: 15%; /* Adjusted width */
+            width: 10%; /* Adjusted width */
             text-align: center;
         }
 
         .main-content {
-            width: 80%; /* Adjusted width */
-            padding: 20px;
-        }
+            width: calc(65%); /* Adjusted width, considering padding */
+    padding: 20px;
+    margin-left: 320px; /* Auto margin to push it to the right */
+    margin-right: auto; /* Auto margin to push it to the left */
+    text-align: center; /* Center the text within the main content */
+}
         
         .main-content p{
-    width: 300px; 
+    width: 300px;
     max-width: 100%;
     font-size: 16px;
     margin-left: auto;
