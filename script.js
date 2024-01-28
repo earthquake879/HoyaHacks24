@@ -2,15 +2,34 @@ async function sendTask(username, score, task) {
     username = encodeURI(username);
     score = encodeURI(score);
     task = encodeURI(task);
-    const url = "https://environeer.glitch.me/task?user="+username+"&score="+score+"&task="+task;
+    const url = "https://environeer-api.glitch.me/task?user="+username+"&score="+score+"&task="+task;
     return await((await fetch(url)).json());
 }
 async function sendQuiz(username, score) {
     username = encodeURI(username);
     score = encodeURI(score);
-    const url = "https://environeer.glitch.me/quiz?user="+username+"&score="+score;
+    const url = "https://environeer-api.glitch.me/quiz?user="+username+"&score="+score;
     return await((await fetch(url)).json());
 }
+async function getLeaderboard() {
+    const url = "https://environeer-api.glitch.me/leaderboard";
+    var data =  await ((await fetch(url)).json());
+    
+    const tbody = document.getElementById('leaderboardTable').querySelector('tbody');
+    tbody.innerHTML = ''; // Clear existing rows
+
+    // Add a new row for each leaderboard entry
+    data.forEach((entry, index) => {
+        const row = tbody.insertRow();
+        const rankCell = row.insertCell();
+        rankCell.textContent = "#"+(index+1);
+        const usernameCell = row.insertCell();
+        usernameCell.textContent = entry.user;
+        const scoreCell = row.insertCell();
+        scoreCell.textContent = entry.score;
+    });
+}
+getLeaderboard();
 var selectedMarker = null;
 
 function initMap() {
