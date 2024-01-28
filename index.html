@@ -140,9 +140,16 @@
         <section class="map-section">
             <h2>Energy Usage Map</h2>
             <p>Explore energy usage data across the Georgetown University campus.</p>
-            <button>View Energy Usage Map</button>
+            <button onclick="openMap()">View Energy Usage Map</button>
         </section>
     </main>
+
+    <script>
+        function openMap() {
+            // Open a new window with the PNG file
+            window.open('heatmapGeorgetown.png', '_blank', 'width=600, height=400');
+        }
+    </script>
 
     <div class="sidebar">
         <a href="index.html">Home</a>
