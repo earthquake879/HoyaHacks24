@@ -1,15 +1,82 @@
+var selectedMarker = null;
+
 function initMap() {
-    var location = { lat: 38.907852, lng: -77.072807 };
+    var georgetown = { lat: 38.9097, lng: -77.0654 };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: location
+        zoom: 15,
+        center: georgetown
     });
+
+    // Colors for the markers
+    var colors = ['blue', 'pink', 'yellow', 'purple', 'black', 'white'];
+    colors.forEach(function(color) {
+        var button = document.createElement('button');
+        button.textContent = color.charAt(0).toUpperCase() + color.slice(1) + ' Marker';
+        button.classList.add('custom-map-control-button');
+        button.addEventListener('click', function() {
+            addColoredMarker(color, map);
+        });
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
+    });
+
+    // Add the "Enter Text" button
+    var enterTextButton = document.createElement('button');
+    enterTextButton.textContent = 'Enter Text';
+    enterTextButton.classList.add('custom-map-control-button');
+    enterTextButton.onclick = function() {
+        if (selectedMarker) {
+            var username = prompt("Enter your username:");
+            var activity = prompt("What did you do?");
+            selectedMarker.setTitle(username + ": " + activity);
+        } else {
+            alert("Please select a marker first.");
+        }
+    };
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(enterTextButton);
+}
+
+function addColoredMarker(color, map) {
+    var georgetown = { lat: 38.9097, lng: -77.0654 };
+    var markerColor = getColorForMarker(color);
+
     var marker = new google.maps.Marker({
-        position: location,
+        position: georgetown,
         map: map,
-        title: 'My location'
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: markerColor,
+            fillOpacity: 0.8,
+            strokeWeight: 2
+        },
+        draggable: true
+    });
+
+    // Add click event listener to the marker
+    marker.addListener('click', function() {
+        selectedMarker = marker;
     });
 }
+
+function getColorForMarker(color) {
+    // Define a simple map of color names to hex values
+    var colorMap = {
+        'blue': '#0000FF',
+        'pink': '#FFC0CB',
+        'yellow': '#FFFF00',
+        'purple': '#800080',
+        'black': '#000000',
+        'white': '#FFFFFF'
+    };
+
+    return colorMap[color] || '#FF0000'; // default to red if color not found
+}
+
+
+
+
+
+
 
 function showMaps() {
     document.getElementById('mapsDashboard').style.display = 'block';
