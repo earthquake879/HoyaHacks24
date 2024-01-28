@@ -41,7 +41,7 @@ header h1 {
     font-size: 2em; /* Adjust the size as needed */
     /* margin-bottom: 20px;  */
     animation-name: bouncing;
-    animation-duration: 1s; /*Set the duration of the animation*/
+    animation-duration: 1s; /* Set the duration of the animation */
     animation-iteration-count: infinite;
     position: relative; /* Set the position property */
   }
@@ -90,16 +90,18 @@ header h1 {
 
 .main-content {
     text-align: center;
-    /* margin-left: 200px; */
-
-
-    padding: 0px 10px;
+    margin-left: auto; /* Auto margin to push the element to the right */
+    margin-right: 20px; /* Adjust the right margin as needed */
+    max-width: 25%;
+    padding: 10px;
+    border: 1px solid #009B77;
+    background-color: #fff;
 }
 
 
 .main-content p{
-    width: 300px;
-    max-width: 100%;
+    /* width: 200px;
+    max-width: 50%; */
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
