@@ -253,6 +253,7 @@ header h1 {
     margin: 20px auto;
     padding: 20px;
     max-width: 600px; /* Adjust as needed */
+    background-color:   #228b22;
 }
 
 #leaderboardTable {
