@@ -261,9 +261,8 @@
         <!-- Dynamically generate this part based on the appliance data -->
         <!-- Example for one appliance: -->
         <div class="appliance">
-            <input type="checkbox" id="refrigeratorCheckbox" name="appliance" value="Refrigerator">
-            <label for="refrigeratorCheckbox">Refrigerator</label>
-            <input type="text" id="refrigeratorHours" placeholder="Hours Used" style="display: none;">
+            <label for="applienceCheckbox">applience</label>
+            <input type="text" id="applienceHours" placeholder="Hours Used" style="display: none;">
         </div>
         <!-- Repeat for each appliance -->
         <button type="button" onclick="submitCalculator()">Submit</button>
@@ -271,6 +270,11 @@
     <div id="calculatorResult" style="display: none;">
         <!-- Results table will be generated here -->
     </div>
+    <form id="calculatorForm" onsubmit="submitCalculator(); return false;">
+        <!-- Dynamically generated checkboxes and input fields for each appliance -->
+        <button type="submit">Calculate</button>
+    </form>
+    
 </div>
 
 
