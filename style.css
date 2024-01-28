@@ -10,6 +10,10 @@ header h1 {
     margin-top: 1%; /* Adjust the top margin as needed */
     margin-bottom: 1%; /* Adjust the bottom margin as needed */
     margin-left: 4%;
+    animation-name: bouncing;
+    animation-duration: 1s; /* Set the duration of the animation */
+    animation-iteration-count: 5;
+    position: relative; /* Set the position property */
 }
 
 #environeerL {
@@ -35,40 +39,31 @@ header h1 {
 }
 .main-content h1 {
     /* text-align: center; */
-    font-family: 'Brush Script MT', sans-serif;
+    /* font-family: 'Brush Script MT', sans-serif; */
     /* height: 100%;
     width: 200px; */
     font-size: 2em; /* Adjust the size as needed */
     /* margin-bottom: 20px;  */
-    animation-name: bouncing;
-    animation-duration: 1s; /* Set the duration of the animation */
-    animation-iteration-count: infinite;
-    position: relative; /* Set the position property */
   }
 
 
  
   @keyframes bouncing {  
     0% {
-      top: 0px;
-    }
-   
-    25%{
-        top: 10px;
-    }
-   
-    50%{
-        top: 10px;
-    }
-
-
-    75% {
-      top: 0px;
-    }
-    /* 50% {
-        top: 20px;
-    } */
-   
+    left: calc(1% - 10px); /* Start at the center point of the movement */
+  }
+  25% {
+    left: calc(1% - 5px); /* Move slightly to the left */
+  }
+  50% {
+    left: calc(1% - 5px); 
+  }
+  75% {
+    left: calc(1% - 10px); /* Move back to the center */
+  }
+  100% {
+    left: calc(1% - 10px);
+  }
   }
 
 
