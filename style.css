@@ -227,6 +227,7 @@ header h1 {
     margin-right: 5px;
 }
 #calculatorDashboard {
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Aligns children (form) in the center of this div */
@@ -248,6 +249,7 @@ header h1 {
 }
 
 #leaderboardDashboard {
+    margin-left: 10%;
     margin: 20px auto;
     padding: 20px;
     max-width: 100%; /* Adjust as needed */
@@ -255,13 +257,14 @@ header h1 {
 }
 
 #leaderboardTable {
-    
+    width: 100%;
     border-collapse: collapse;
     margin-left:auto;
     margin-right: auto;
 }
 
 #leaderboardTable th, #leaderboardTable td {
+    
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
