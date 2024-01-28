@@ -46,7 +46,9 @@ header h1 {
     /* margin-bottom: 20px;  */
   }
 
-
+.question{
+    margin-left: 20%;
+}
  
   @keyframes bouncing {  
     0% {
