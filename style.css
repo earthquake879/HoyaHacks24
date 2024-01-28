@@ -18,9 +18,9 @@ header h1 {
 
 #environeerL {
     position: absolute;
-    top: 1%; /* Adjust the top position as needed */
-    right: 8%; /* Adjust the left position as needed */
-    width: 12%; /* Set the desired width */
+    bottom: 84.5%; /* Adjust the top position as needed */
+    right: 12%; /* Adjust the left position as needed */
+    width: 8%; /* Set the desired width */
     height: auto; /* Maintain aspect ratio for height */
   }
 
@@ -46,7 +46,9 @@ header h1 {
     /* margin-bottom: 20px;  */
   }
 
-
+.question{
+    margin-left: 20%;
+}
  
   @keyframes bouncing {  
     0% {
