@@ -409,4 +409,43 @@ function submitCalculator() {
 
     resultsDiv.appendChild(table);
 }
+// Example leaderboard data
+const leaderboardData = [
+    { rank: 1, username: 'Alice', score: 98 },
+    { rank: 2, username: 'Bob', score: 87 },
+    { rank: 3, username: 'Charlie', score: 85 },
+    // Add more leaderboard entries as needed
+];
+
+// Function to populate the leaderboard
+function populateLeaderboard() {
+    const tbody = document.getElementById('leaderboardTable').querySelector('tbody');
+    tbody.innerHTML = ''; // Clear existing rows
+
+    // Add a new row for each leaderboard entry
+    leaderboardData.forEach(entry => {
+        const row = tbody.insertRow();
+        const rankCell = row.insertCell();
+        rankCell.textContent = entry.rank;
+        const usernameCell = row.insertCell();
+        usernameCell.textContent = entry.username;
+        const scoreCell = row.insertCell();
+        scoreCell.textContent = entry.score;
+    });
+}
+
+// Call populateLeaderboard when the document is loaded
+document.addEventListener('DOMContentLoaded', populateLeaderboard);
+function showLeaderboard() {
+    // Hide other dashboards
+    document.getElementById('homeDashboard').style.display = 'none';
+    document.getElementById('mapContent').style.display = 'none';
+    document.getElementById('econairesDashboard').style.display = 'none';
+    document.getElementById('calculatorDashboard').style.display = 'none';
+    // ... hide any other dashboards ...
+
+    // Show the leaderboard dashboard
+    document.getElementById('leaderboardDashboard').style.display = 'block';
+}
+
     
