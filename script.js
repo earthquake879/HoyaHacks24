@@ -79,9 +79,12 @@ function getColorForMarker(color) {
 
 
 function showMaps() {
-    document.getElementById('mapsDashboard').style.display = 'block';
-    document.getElementById('lightDetectionDashboard').style.display = 'none';
+    document.getElementById('homeDashboard').style.display = 'none'; // Hide home dashboard
+    document.getElementById('mapContent').style.display = 'block'; // Show map content
+    initMap(); // Initialize the map if needed
 }
+    
+
 
 function showLightDetection() {
     document.getElementById('mapsDashboard').style.display = 'none';

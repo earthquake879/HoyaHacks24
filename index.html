@@ -159,10 +159,11 @@
         </p>
     </div>
 
-    <div id="mapsDashboard" class="dashboard-content" style="display: none;">
-        <!-- Maps Dashboard Content -->
-        <div id="map" style="height: 32%;"></div>
-    </div>
+    <div id="mapContent" class="dashboard-content" style="display: none;">
+      <div id="map" style="height: 500px;"></div>
+      <!-- Add additional map-related content here if needed -->
+  </div>
+  <div id="homeDashboard" class="dashboard-content">
 
     <div id="lightDetectionDashboard" class="dashboard-content" style="display: none;">
         <!-- Light Detection Dashboard Content -->
@@ -170,6 +171,8 @@
     </div>
     
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDChxbXPS2PDHbJkmKsFYpoLTaOM-905vQ&callback=initMap"></script>
+   
+
     <script async src="https://docs.opencv.org/master/opencv.js"></script>
 </body>
 </html>
