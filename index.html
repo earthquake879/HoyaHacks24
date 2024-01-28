@@ -147,6 +147,8 @@
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="#" onclick="showMaps()">Maps</a>
+        <button onclick="showEconaires()">Econaires Quiz</button>
+
     </div>
 
     <div class="main-content">
@@ -163,6 +165,40 @@
       <!-- Add additional map-related content here if needed -->
   </div>
   <div id="homeDashboard" class="dashboard-content">
+    <!-- Home dashboard content -->
+</div>
+
+<!-- Econaires Quiz Dashboard Content, initially hidden -->
+<!-- Econaires Quiz Dashboard Content -->
+<div id="econairesDashboard" class="dashboard-content" style="display: none;">
+  <h2>Econaires Energy Quiz</h2>
+  <form id="quizForm">
+      <!-- Repeat the following structure for each question -->
+      <!-- Question 1 -->
+      <!-- Question 2 -->
+<!-- Question 1 -->
+<div class="question">
+  <p>What percentage of the energy used by traditional incandescent light bulbs is emitted as heat rather than light?</p>
+  <label><input type="radio" name="q1" value="a"> 5%</label>
+  <label><input type="radio" name="q1" value="b"> 15%</label>
+  <label><input type="radio" name="q1" value="c"> 25%</label>
+  <label><input type="radio" name="q1" value="d"> 95%</label>
+</div>
+
+<!-- Repeat for each question -->
+
+      <!-- ... Additional questions ... -->
+      <button type="button" onclick="submitQuiz()">Submit Answers</button>
+  </form>
+  <div id="quizResult" style="display: none;">
+      <h3>Your Score: <span id="userScore">0</span>/10</h3>
+      <!-- Correct answers can be shown here -->
+  </div>
+</div>
+
+
+
+
 
     <div id="lightDetectionDashboard" class="dashboard-content" style="display: none;">
         <!-- Light Detection Dashboard Content -->

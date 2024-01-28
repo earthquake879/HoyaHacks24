@@ -83,7 +83,20 @@ function showMaps() {
     document.getElementById('mapContent').style.display = 'block'; // Show map content
     initMap(); // Initialize the map if needed
 }
-    
+function showEconaires() {
+    // Hide any sections that shouldn't be displayed with the home page
+    document.getElementById('mapContent').style.display = 'none';
+    document.getElementById('lightDetectionDashboard').style.display = 'none';
+  
+    // Do not hide the homeDashboard here if it should stay visible
+  
+    // Show the Econaires quiz dashboard content
+    document.getElementById('econairesDashboard').style.display = 'block'; // Change this to 'block' to show
+}
+
+
+
+
 
 
 function showLightDetection() {
@@ -189,3 +202,40 @@ function processFrame() {
 openLightDetection();
 
 
+function submitQuiz() {
+    var score = 0;
+    var totalQuestions = 10;
+    var form = document.getElementById('quizForm');
+    var userScore = document.getElementById('userScore');
+    var resultSection = document.getElementById('quizResult');
+
+    // Example logic for checking an answer
+    var q1 = form['q1'].value;
+    if(q1 === 'd') { score++; }
+    // Repeat for all questions...
+
+    // Display the score
+    userScore.textContent = score.toString();
+    resultSection.style.display = 'block';
+}
+function submitQuiz() {
+    var score = 0;
+    var correctAnswers = {
+        q1: 'd', q2: 'c', q3: 'c', q4: 'd',
+        q5: 'a', q6: 'c', q7: 'c', q8: 'b',
+        q9: 'b', q10: 'd'
+    };
+    
+    for (var i = 1; i <= 10; i++) {
+        var question = 'q' + i;
+        var selectedValue = document.querySelector('input[name="' + question + '"]:checked');
+        
+        if (selectedValue && selectedValue.value === correctAnswers[question]) {
+            score++;
+        }
+    }
+    
+    // Display the score
+    document.getElementById('userScore').textContent = score;
+    document.getElementById('quizResult').style.display = 'block';
+}
