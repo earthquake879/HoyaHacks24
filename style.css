@@ -223,3 +223,22 @@ header h1 {
 .question input[type="radio"] {
     margin-right: 5px;
 }
+#calculatorDashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns children (form) in the center of this div */
+    padding: 20px;
+    margin: 20px auto; /* Adds margin on top/bottom and auto on left/right to center horizontally */
+    max-width: 600px; /* Adjust as needed for your design */
+}
+
+#calculatorDashboard .appliance {
+    display: flex;
+    justify-content: center; /* Centers the checkbox and input within each .appliance div */
+    margin-bottom: 10px; /* Adds some space between each appliance row */
+}
+
+#calculatorDashboard .appliance input[type="text"] {
+    margin-left: 10px; /* Adds some space between the checkbox label and the input field */
+}
+

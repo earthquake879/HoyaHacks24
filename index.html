@@ -148,6 +148,7 @@
         <a href="index.html">Home</a>
         <a href="#" onclick="showMaps()">Maps</a>
         <button onclick="showEconaires()">Econaires Quiz</button>
+        <button onclick="showCalculator()">Calculator</button>
 
     </div>
 
@@ -253,6 +254,24 @@
 </div>
 
 
+<!-- Calculator Dashboard Content -->
+<div id="calculatorDashboard" class="dashboard-content" style="display: none;">
+    <h2>Energy Use Calculator</h2>
+    <form id="calculatorForm">
+        <!-- Dynamically generate this part based on the appliance data -->
+        <!-- Example for one appliance: -->
+        <div class="appliance">
+            <input type="checkbox" id="refrigeratorCheckbox" name="appliance" value="Refrigerator">
+            <label for="refrigeratorCheckbox">Refrigerator</label>
+            <input type="text" id="refrigeratorHours" placeholder="Hours Used" style="display: none;">
+        </div>
+        <!-- Repeat for each appliance -->
+        <button type="button" onclick="submitCalculator()">Submit</button>
+    </form>
+    <div id="calculatorResult" style="display: none;">
+        <!-- Results table will be generated here -->
+    </div>
+</div>
 
 
 

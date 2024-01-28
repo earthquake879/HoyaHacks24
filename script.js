@@ -260,3 +260,99 @@ function removeSelectedMarker() {
         alert("No marker selected!");
     }
 }
+// Data for the appliances based on the uploaded image
+const appliancesData = [
+    { name: "Refrigerator", power: 73 },
+    { name: "Mini-fridge", power: 45 },
+    { name: "Water heater", power: 2000 },
+    { name: "Washing machine", power: 500 },
+    { name: "Dryer", power: 3000 },
+    { name: "Iron", power: 1200 },
+    { name: "Fan (small/ceiling)", power: 50 },
+    { name: "Microwave", power: 1200 },
+    { name: "Television", power: 80 },
+    { name: "Sound system", power: 60 },
+    { name: "A/C night time (1hp)", power: 900 },
+    { name: "A/C day time (1.5hp)", power: 1210 },
+    { name: "Lighting (dorm)", power: 40 },
+    { name: "Vacuum cleaner", power: 1200 },
+    { name: "Laptop PC (charging)", power: 80 },
+    { name: "Cell Phone (charging)", power: 5 },
+    { name: "Xbox One", power: 112 },
+    { name: "Playstation 4", power: 137 },
+    { name: "Nintendo Switch", power: 18 }
+];
+
+// Add checkboxes and input fields for each appliance on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('calculatorForm');
+    appliancesData.forEach(appliance => {
+        const div = document.createElement('div');
+        div.className = 'appliance';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = appliance.name.toLowerCase().replace(/\s+/g, '') + 'Checkbox';
+        checkbox.name = 'appliance';
+        checkbox.value = appliance.name;
+
+        const label = document.createElement('label');
+        label.htmlFor = checkbox.id;
+        label.textContent = appliance.name;
+
+        const hoursInput = document.createElement('input');
+        hoursInput.type = 'number';
+        hoursInput.id = appliance.name.toLowerCase().replace(/\s+/g, '') + 'Hours';
+        hoursInput.placeholder = 'Hours Used';
+
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        div.appendChild(hoursInput);
+        form.appendChild(div);
+    });
+});
+
+// Function to calculate and display the results
+function submitCalculator() {
+    const resultsDiv = document.getElementById('calculatorResult');
+    resultsDiv.innerHTML = ''; // Clear previous results
+    resultsDiv.style.display = 'block';
+
+    // Create and append the table
+    const table = document.createElement('table');
+    const headerRow = table.insertRow();
+    ['Appliance', 'Power (watts)', 'Hours of Usage', 'Calculated Power (W)', 'Calculated Annual kWh'].forEach(headerText => {
+        const headerCell = document.createElement('th');
+        headerCell.textContent = headerText;
+        headerRow.appendChild(headerCell);
+    });
+
+    // Calculate and create a row for each checked appliance with user-entered hours
+    appliancesData.forEach(appliance => {
+        const checkbox = document.getElementById(appliance.name.toLowerCase().replace(/\s+/g, '') + 'Checkbox');
+        if (checkbox.checked) {
+            const hoursInput = document.getElementById(appliance.name.toLowerCase().replace(/\s+/g, '') + 'Hours');
+            const hours = parseFloat(hoursInput.value) || 0; // Use 0 if input is empty or invalid
+            const calculatedPower = appliance.power * hours;
+            const calculatedAnnualKWh = (calculatedPower / 1000) * (365 / 24); // Assuming the input is daily usage
+
+            const row = table.insertRow();
+            [appliance.name, appliance.power, hours, calculatedPower.toFixed(2), calculatedAnnualKWh.toFixed(2)].forEach(cellText => {
+                const cell = row.insertCell();
+                cell.textContent = cellText;
+            });
+        }
+    });
+
+    resultsDiv.appendChild(table);
+}
+function showCalculator() {
+    // Hide other sections
+    document.getElementById('homeDashboard').style.display = 'none';
+    document.getElementById('mapContent').style.display = 'none';
+    document.getElementById('econairesDashboard').style.display = 'none';
+    document.getElementById('lightDetectionDashboard').style.display = 'none';
+
+    // Show the Calculator dashboard
+    document.getElementById('calculatorDashboard').style.display = 'block';
+}
