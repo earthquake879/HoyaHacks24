@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-var markers = []; // This will hold all markers
-var selectedMarker; // This will reference the currently selected marker
-=======
-async function sendScore(username, score, task) {
-    username = encodeURI(username);
-    score = encodeURI(score);
-    task = encodeURI(task);
-    const url = "environeer.glitch.me/score?user="+username+"&score="+score+"&task="+task;
-    return await((await fetch(url)).json());
-}
-
-
-
-
->>>>>>> 3a1b97f1f0acc272327b790b4322d05d1f46c721
-
 var selectedMarker = null;
 
 function initMap() {
