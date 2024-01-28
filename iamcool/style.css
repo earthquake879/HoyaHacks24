@@ -7,30 +7,30 @@ body, html {
 
 header h1 {
     text-align: center;
-    margin-top: 50px; /* Adjust the top margin as needed */
-    margin-bottom: 20px; /* Adjust the bottom margin as needed */
-    margin-left: 60px;
+    margin-top: 1%; /* Adjust the top margin as needed */
+    margin-bottom: 1%; /* Adjust the bottom margin as needed */
+    margin-left: 4%;
 }
 
 #environeerL {
     position: absolute;
-    top: 10px; /* Adjust the top position as needed */
-    right: 100px; /* Adjust the left position as needed */
-    width: 200px; /* Set the desired width */
+    top: 1%; /* Adjust the top position as needed */
+    right: 8%; /* Adjust the left position as needed */
+    width: 12%; /* Set the desired width */
     height: auto; /* Maintain aspect ratio for height */
   }
 
 
 .sidebar {
     height: 100%;
-    width: 200px;
+    width: 12%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 1.7%;
     border: 2px solid rgb(56, 19, 59);
 }
 .main-content h1 {
@@ -118,7 +118,7 @@ header h1 {
 }
 
 #map {
-    height: 500px; /* Ensure map has a set height */
+    height: 50%; /* Ensure map has a set height */
 }
 
 /* Other styling as needed */
