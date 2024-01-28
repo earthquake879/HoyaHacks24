@@ -247,3 +247,23 @@ header h1 {
     margin-left: 10px; /* Adds some space between the checkbox label and the input field */
 }
 
+#leaderboardDashboard {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px; /* Adjust as needed */
+}
+
+#leaderboardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboardTable th, #leaderboardTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#leaderboardTable thead {
+    background-color: #f2f2f2;
+}
