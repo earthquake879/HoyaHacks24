@@ -6,6 +6,13 @@ body, html {
 }
 
 
+#environeerL {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 100px; /* Adjust the left position as needed */
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio for height */
+  }
 
 
 .sidebar {
