@@ -12,7 +12,7 @@ header h1 {
     margin-left: 4%;
     animation-name: bouncing;
     animation-duration: 1s; /* Set the duration of the animation */
-    animation-iteration-count: 5;
+    animation-iteration-count: 1;
     position: relative; /* Set the position property */
 }
 
@@ -51,20 +51,21 @@ header h1 {
 }
  
   @keyframes bouncing {  
-    0% {
-    left: calc(1% - 10px); /* Start at the center point of the movement */
+    
+  0%{
+    font-size: 20px;
   }
-  25% {
-    left: calc(1% - 5px); /* Move slightly to the left */
+  25%{
+    font-size: 18px;
   }
-  50% {
-    left: calc(1% - 5px); 
+  50%{
+    font-size: 16px;
   }
-  75% {
-    left: calc(1% - 10px); /* Move back to the center */
+  75%{
+    font-size: 14px;
   }
-  100% {
-    left: calc(1% - 10px);
+  100%{
+    font-size: 16px;
   }
   }
 
@@ -230,6 +231,8 @@ header h1 {
     padding: 20px;
     margin: 20px auto; /* Adds margin on top/bottom and auto on left/right to center horizontally */
     max-width: 600px; /* Adjust as needed for your design */
+    border: 1px solid #009B77;
+    background-color: #fff;
 }
 
 #calculatorDashboard .appliance {
